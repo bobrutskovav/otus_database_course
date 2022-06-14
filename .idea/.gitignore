@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/.idea/
+/modules.xml
+/otus_database_course.iml
+/vcs.xml
