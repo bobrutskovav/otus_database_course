@@ -11,7 +11,7 @@ CREATE INDEX IF NOT EXISTS house_id_index ON
 
 CREATE TABLE IF NOT EXISTS sensors.zone(
                        "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                       "house_id" INTEGER NOT NULL UNIQUE,
+                       "house_id" INTEGER NOT NULL,
                        "title" VARCHAR(255) NOT NULL,
                        "description" VARCHAR(255) NOT NULL
 );
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS sensors.device(
                          "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
                          "zone_id" INTEGER NOT NULL,
                          "type_id" INTEGER NOT NULL,
-                         "title" INTEGER NOT NULL
+                         "title" VARCHAR(255) NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS device_id_index ON
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS sensors.critical_event(
 
 CREATE TABLE IF NOT EXISTS sensors.event_type(
                              "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                             "type" VARCHAR(255) NOT NULL,
+                             "type" VARCHAR(255) NOT NULL UNIQUE,
                              "description" VARCHAR(255) NOT NULL
 );
 

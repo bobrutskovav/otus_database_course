@@ -9,3 +9,4 @@
 2. [Ограничения и индексы](homework_2)
 3. [Создание пользователя в Postgres](homework_3)
 4. [DDL скрипты для postgres](homework_4)
+5. [DML в PostgreSQL](homework_5)
