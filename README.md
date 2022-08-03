@@ -10,3 +10,4 @@
 3. [Создание пользователя в Postgres](homework_3)
 4. [DDL скрипты для postgres](homework_4)
 5. [DML в PostgreSQL](homework_5)
+6. [Индексы в PostgreSQL](homework_6)
