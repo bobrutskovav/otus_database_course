@@ -26,7 +26,7 @@ CREATE TABLE "device_type"(
 CREATE TABLE "event"(
                         "id" UUID PRIMARY KEY,
                         "device_id" UUID NOT NULL UNIQUE,
-                        "msg" JSON NOT NULL,
+                        "msg" JSONB NOT NULL,
                         "created_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL
 );
 
@@ -44,19 +44,4 @@ ALTER TABLE
     "event" ADD CONSTRAINT "event_device_id_foreign" FOREIGN KEY("device_id") REFERENCES "device"("id");
 
 
-CREATE INDEX idx_house_id
-    ON house("id");
 
-CREATE INDEX idx_zone_id
-    ON zone("id");
-
-CREATE INDEX idx_device_id
-    ON device("id");
-
-
-CREATE INDEX idx_event_id_device_id
-    ON event("id","device_id");
-
-
-CREATE INDEX idx_event_created_at
-    ON event("created_at");
