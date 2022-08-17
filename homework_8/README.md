@@ -135,7 +135,7 @@ postgres=# INSERT INTO my_pub_table values(1);
 postgres=# CREATE PUBLICATION my_pub FOR TABLE my_pub_table;
 ```
 
-<\p><\details>
+</p></details>
 
 
 *реплика получила нужный конфиг (wal_level = logical), создаем таблицу, подписку и делаем запрос на подключение к публикации*
