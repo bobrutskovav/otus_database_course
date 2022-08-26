@@ -12,3 +12,4 @@
 5. [DML в PostgreSQL](homework_5)
 6. [Индексы в PostgreSQL](homework_6)
 7. [DML: агрегация и сортировка, CTE, аналитические функции](homework_7)
+8. [Репликация](homework_8)

@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  postgres-master:
+    container_name: postgres-master
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "pass"
+
+    volumes:
+      - ./master/conf:/pgconf
+    command:
+      - "postgres"
+      - "-c"
+      - "config_file=/pgconf/postgresql.conf"
+      - "-c"
+      - "hba_file=/pgconf/pg_hba.conf"
+    ports:
+      - "5432:5432"
+
+  postgres-replica:
+    image: postgres:latest
+    container_name: postgres-replica
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "pass"
+    volumes:
+      - ./replica/conf:/pgconf
+    command:
+      - "postgres"
+      - "-c"
+      - "config_file=/pgconf/postgresql.conf"
+      - "-c"
+      - "hba_file=/pgconf/pg_hba.conf"
+    ports:
+      - "5433:5432"
