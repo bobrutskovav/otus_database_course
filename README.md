@@ -13,3 +13,4 @@
 6. [Индексы в PostgreSQL](homework_6)
 7. [DML: агрегация и сортировка, CTE, аналитические функции](homework_7)
 8. [Репликация](homework_8)
+9. [Архитектура Mysql](homework_9)
