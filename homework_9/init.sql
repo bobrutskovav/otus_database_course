@@ -1,5 +1,7 @@
-CREATE USER IF NOT EXISTS 'creator'@'*' IDENTIFIED BY 'password';
-CREATE USER IF NOT EXISTS 'reader'@'*' IDENTIFIED BY 'password';
+CREATE USER IF NOT EXISTS 'creator'@'%' IDENTIFIED BY 'password';
+CREATE USER IF NOT EXISTS 'reader'@'%' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON *.* TO 'creator'@'%' WITH GRANT OPTION;
 
 CREATE DATABASE IF NOT EXISTS sensors;
 USE sensors;
